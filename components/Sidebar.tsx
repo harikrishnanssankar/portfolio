@@ -16,8 +16,8 @@ const Sidebar = () => {
         height="100"
         className="w-32 h-32 rounded-full"
       />
-      <h3 className="my-4 text-3xl font-medium tracking-wider">
-        <span>Harikrishnan </span>S
+      <h3 className="my-4 text-3xl font-medium tracking-wider font-kaushan " >
+        <span style={{color:'#00f260'}} >Harikrishnan </span>S
       </h3>
       <p className={textSection}>React Developer</p>
       <p className={textSection + "flex items-center justify-center"}>
@@ -41,7 +41,7 @@ const Sidebar = () => {
         </div>
         <p>harikrishnanssankar@gmail.com</p>
       </div>
-      <button className={buttonClass} >Email Me</button>
+      <button className={buttonClass} onClick={() => window.open('mailto:harikrishnanssankar@gmail.com')} >Email Me</button>
       <br />
       <button className={buttonClass} >Light UI</button>
     </div>
