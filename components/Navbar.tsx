@@ -38,7 +38,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-between px-5 py-3 my-3" >
       <span className="font-bold text-green-500  text-xl border-b-4 border-green-400 md:text-2xl">{activeItem}</span>
-      <div className="text-red-400 font-lg flex space-x-5">
+      <div className="font-lg flex space-x-5">
         {navRoutes.map((item) => {
          return <NavItem
             activeItem={activeItem}
