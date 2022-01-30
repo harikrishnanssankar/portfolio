@@ -2,7 +2,7 @@ import { RiComputerLine,  } from "react-icons/ri"
 import { FaGraduationCap, FaMobileAlt, FaReact, FaServer } from "react-icons/fa"
 import { MdLanguage } from "react-icons/md"
 import { BsCircleFill } from "react-icons/bs"
-import { IService, ISkill } from "./type"
+import { IProject, IService, ISkill } from "./type"
 
 
 export const services:IService[] = [
@@ -82,5 +82,44 @@ export const tools:ISkill[] = [
         name:"npm",
         level:"10%",
         Icon:BsCircleFill,
+    },
+]
+
+export const projects:IProject[] = [
+    {
+        name:"lglkglk",
+        description:"jdsg ai iewhuewi uawieu iuef iif a",
+        image_path:"/images/olx.png",
+        deployed_url:"https://olx-clone-83579.web.app/",
+        github_url:"https://github.com/harikrishnanssankar/classifieds-app-olx-react-firebase-chat",
+        technologies: ["React", "firebase", "mapbox"],
+        category:["react"]
+    },
+    {
+        name:"lglkglk",
+        description:"jdsg ai iewhuewi uawieu iuef iif a",
+        image_path:"/images/olx.png",
+        deployed_url:"https://olx-clone-83579.web.app/",
+        github_url:"https://github.com/harikrishnanssankar/classifieds-app-olx-react-firebase-chat",
+        technologies: ["React", "firebase", "mapbox"],
+        category:["react"]
+    },
+    {
+        name:"lglkglk",
+        description:"jdsg ai iewhuewi uawieu iuef iif a",
+        image_path:"/images/olx.png",
+        deployed_url:"https://olx-clone-83579.web.app/",
+        github_url:"https://github.com/harikrishnanssankar/classifieds-app-olx-react-firebase-chat",
+        technologies: ["React", "firebase", "mapbox"],
+        category:["react"]
+    },
+    {
+        name:"lglkglk",
+        description:"jdsg ai iewhuewi uawieu iuef iif a",
+        image_path:"/images/olx.png",
+        deployed_url:"https://olx-clone-83579.web.app/",
+        github_url:"https://github.com/harikrishnanssankar/classifieds-app-olx-react-firebase-chat",
+        technologies: ["React", "firebase", "mapbox"],
+        category:["react"]
     },
 ]
