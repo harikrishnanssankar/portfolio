@@ -47,27 +47,27 @@ export const languages:ISkill[] = [
     },
     {
         name:"NextJs",
-        level:"10%",
+        level:"70%",
         Icon:BsCircleFill,
     },
     {
         name:"JavaScript",
-        level:"10%",
+        level:"60%",
         Icon:BsCircleFill,
     },
     {
         name:"Node.js",
-        level:"10%",
+        level:"50%",
         Icon:BsCircleFill,
     },
     {
         name:"ExpressJs",
-        level:"10%",
+        level:"40%",
         Icon:BsCircleFill,
     },
     {
         name:"MongoDB",
-        level:"10%",
+        level:"30%",
         Icon:BsCircleFill,
     },
 ]
@@ -75,12 +75,12 @@ export const languages:ISkill[] = [
 export const tools:ISkill[] = [
     {
         name:"Git",
-        level:"10%",
+        level:"70%",
         Icon:BsCircleFill,
     },
     {
         name:"npm",
-        level:"10%",
+        level:"40%",
         Icon:BsCircleFill,
     },
 ]
@@ -102,7 +102,7 @@ export const projects:IProject[] = [
         deployed_url:"https://olx-clone-83579.web.app/",
         github_url:"https://github.com/harikrishnanssankar/classifieds-app-olx-react-firebase-chat",
         technologies: ["React", "firebase", "mapbox"],
-        category:["react"]
+        category:["react","node", "express"]
     },
     {
         name:"lglkglk",
@@ -111,7 +111,7 @@ export const projects:IProject[] = [
         deployed_url:"https://olx-clone-83579.web.app/",
         github_url:"https://github.com/harikrishnanssankar/classifieds-app-olx-react-firebase-chat",
         technologies: ["React", "firebase", "mapbox"],
-        category:["react"]
+        category:["react", "mongo"]
     },
     {
         name:"lglkglk",

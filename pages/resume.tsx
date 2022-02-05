@@ -1,10 +1,15 @@
+import { motion } from "framer-motion";
+import { fadeInUp, routeAnimation, stagger } from "../components/animations";
 import Bar from "../components/Bar";
 import { languages, tools } from "../components/data";
 
 const Resume = () => {
+
+ 
+
   return (
-    <div className="py-2 px-6">
-      <div className="grid gap-6 md:grid-cols-2">
+    <motion.div  variants={routeAnimation} initial="initial" animate="animate" exit="exit" className="py-2 px-6">
+      <motion.div variants={fadeInUp} initial="initial" animate="animate" className="grid gap-6 md:grid-cols-2">
         <div>
           <h5 className="my-3 text-2xl font-bold">Education</h5>
           <div>
@@ -26,26 +31,26 @@ const Resume = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className="grid gap-6 md:grid-cols-2">
         <div>
           <h5 className="my-3 text-2xl font-bold">Languages and Frameworks</h5>
-          <div className="my-2">
+          <motion.div variants={stagger} initial="initial" animate="animate" className="my-2">
               {
                   languages.map(language => <Bar data={language} key={language.name} />)
               }
-          </div>
+          </motion.div>
         </div>
         <div>
           <h5 className="my-3 text-2xl font-bold">Tools and Softwares</h5>
-          <div className="my-2">
+          <motion.div variants={stagger} initial="initial" animate="animate" className="my-2">
               {
                   tools.map(tool => <Bar data={tool} key={tool.name} />)
               }
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

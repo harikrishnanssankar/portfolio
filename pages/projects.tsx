@@ -1,22 +1,40 @@
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { fadeInUp, routeAnimation, stagger } from "../components/animations";
 import { projects } from "../components/data";
 import ProjectCard from "../components/ProjectCard";
+import ProjectNavbar from "../components/ProjectNavbar";
+import { Category } from "../components/type";
 
 const Projects = () => {
-  console.log(projects);
+const [projectList, setProjectList] = useState(projects);
+const [activeCategory, setActiveCategory] = useState("all");
+
+const handleFilterCategory = (category:Category | "all") => {
+  if (category === "all") {
+    setProjectList(projects)
+    setActiveCategory(category)
+  }else{
+    const filteredProjects = projects.filter(project => project.category.includes(category))
+    setProjectList(filteredProjects)
+    setActiveCategory(category)
+  }
+};
+
 
   return (
-    <div className="px-5 py-2 overflow-y-auto " style={{height:"500px"}}  >
-      <nav>Nav</nav>
-      <div className="grid grid-cols-12 gap-4 my-3 relative  ">
-        {projects.map((project) => {
+    <motion.div  variants={routeAnimation} initial="initial" animate="animate" exit="exit" className="px-5 py-2 overflow-y-auto " style={{height:"500px"}}  >
+      <ProjectNavbar handleFilterCategory={handleFilterCategory} activeCategory={activeCategory} />
+      <motion.div variants={stagger} initial="initial" animate="animate" className="grid grid-cols-12 gap-4 my-3 relative  ">
+        {projectList.map((project) => {
           return (
-            <div className="col-span-12 sm:col-span-6 lg:col-span-4 bg-gray-200 dark:bg-dark-200 " key={project.name}>
+            <motion.div variants={fadeInUp} className="col-span-12 sm:col-span-6 lg:col-span-4 bg-gray-200 dark:bg-dark-200 " key={project.name}>
               <ProjectCard project={project} />
-            </div>
+            </motion.div>
           );
         })}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
