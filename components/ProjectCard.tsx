@@ -21,21 +21,23 @@ const ProjectCard: FunctionComponent<{
 }) => {
   const [modelOpen, setModelOpen] = useState(false);
 
-  //   let modalRef = useRef();
-  //   useEffect(() => {
-  //     let handler = (event) => {
-  //       if (!modalRef.current.contains(event.target)) {
-  //         setModelOpen(false)
-  //       }
-  //     }
-  //     document.addEventListener("mousedown", handler);
-  //     return () => {
-  //       document.removeEventListener("mousedown", handler)
-  //     }
-  // })
+  const modalRef = useRef(null);
+
+  useEffect(() => {
+    // only add the event listener when the modalRef is opened
+    if (!modelOpen) return;
+    function handleClick(event) {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        setModelOpen(false);
+      }
+    }
+    window.addEventListener("click", handleClick);
+    // clean up
+    return () => window.removeEventListener("click", handleClick);
+  }, [modelOpen]);
 
   return (
-    <div>
+    <div className="p-2">
       <Image
         onClick={() => setModelOpen(!modelOpen)}
         src={image_path}
@@ -45,7 +47,7 @@ const ProjectCard: FunctionComponent<{
         height={150}
         layout="responsive"
       />
-      <p onClick={() => setModelOpen(!modelOpen)} className="my-2 text-center">
+      <p onClick={() => setModelOpen(!modelOpen)} className="my-2 text-center w-full cursor-pointer">
         {name}
       </p>
 
@@ -54,7 +56,8 @@ const ProjectCard: FunctionComponent<{
           variants={fadeInUp}
           initial="initial"
           animate="animate"
-          className="absolute top-0 left-0 z-10 w-full p-2 h-auto gap-x-12 grid md:grid-cols-2 text-black dark:text-white bg-gray-100 dark:bg-dark-100"
+          ref={modalRef}
+          className="absolute top-0 left-0 z-10 w-full p-2 md:p-10 h-auto gap-x-12 grid md:grid-cols-2 text-black dark:text-white bg-gray-100 dark:bg-dark-100 rounded-xl shadow-custom-light dark:shadow-custom-dark "
         >
           <motion.div
             variants={stagger}
@@ -68,6 +71,7 @@ const ProjectCard: FunctionComponent<{
                 layout="responsive"
                 height="150"
                 width="300"
+                className="rounded-md"
               />
             </motion.div>
             <motion.div
@@ -77,6 +81,7 @@ const ProjectCard: FunctionComponent<{
               <a
                 href={github_url}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200"
               >
                 <AiFillGithub /> <span>Source Code</span>
@@ -84,6 +89,7 @@ const ProjectCard: FunctionComponent<{
               <a
                 href={deployed_url}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200"
               >
                 <AiFillProject /> <span>Deployed</span>

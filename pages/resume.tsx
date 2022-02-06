@@ -26,8 +26,7 @@ const Resume = () => {
             <h5 className="my-2 text-xl font-bold">ReactJs Developer</h5>
             <p className="font-semibold">iAntz IT Solutions(2021 - on)</p>
             <p>
-              I'm a Fresher with Jr. React Developer Post and Sr. Frontend
-              Developer works!!!
+              {"I'm a Fresher with Jr. React Developer Post and Sr. Frontend Developer works!!!"}
             </p>
           </div>
         </div>

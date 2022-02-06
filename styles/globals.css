@@ -19,7 +19,17 @@ a {
 @tailwind utilities;
 
 body{
-  background-color: black;
+  background-color: rgba(255, 255, 255, 0);
   font-family: sans-serif;
   color: #354358;
+}
+
+::-webkit-scrollbar-thumb{
+  background-image: linear-gradient(to right bottom, #00f260, #0575e6);
+  border-radius: 10px;
+}
+::-webkit-scrollbar{
+  width: 8px;
+  height: 0;
+  background-color: #1e212600;
 }

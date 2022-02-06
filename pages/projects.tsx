@@ -23,12 +23,12 @@ const handleFilterCategory = (category:Category | "all") => {
 
 
   return (
-    <motion.div  variants={routeAnimation} initial="initial" animate="animate" exit="exit" className="px-5 py-2 overflow-y-auto " style={{height:"500px"}}  >
+    <motion.div  variants={routeAnimation} initial="initial" animate="animate" exit="exit" className="px-5 py-2 overflow-y-auto  " style={{height:"500px"}}  >
       <ProjectNavbar handleFilterCategory={handleFilterCategory} activeCategory={activeCategory} />
-      <motion.div variants={stagger} initial="initial" animate="animate" className="grid grid-cols-12 gap-4 my-3 relative  ">
-        {projectList.map((project) => {
+      <motion.div variants={stagger} initial="initial" animate="animate" className="grid grid-cols-12 gap-4 my-3 relative  projectList__container">
+        {projectList.map((project, key) => {
           return (
-            <motion.div variants={fadeInUp} className="col-span-12 sm:col-span-6 lg:col-span-4 bg-gray-200 dark:bg-dark-200 " key={project.name}>
+            <motion.div variants={fadeInUp} className="col-span-12 sm:col-span-6 lg:col-span-4 bg-gray-200 dark:bg-dark-200 " key={key}>
               <ProjectCard project={project} />
             </motion.div>
           );

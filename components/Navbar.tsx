@@ -45,6 +45,7 @@ const Navbar = () => {
             setActiveItem={setActiveItem}
             name={item.name}
             route={item.route}
+            key={item.name}
           />
         })}
        
