@@ -22,6 +22,10 @@ body{
   background-color: rgba(255, 255, 255, 0);
   font-family: sans-serif;
   color: #354358;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 ::-webkit-scrollbar-thumb{

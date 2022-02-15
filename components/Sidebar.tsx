@@ -36,10 +36,10 @@ const Sidebar = () => {
         <GiTie /> Download Resume
       </p>
       <div className="flex flex-row items-center justify-around w-9/12 mx-auto my-5 text-green-500 md:w-full">
-        <a href="">
+        <a href="https://github.com/harikrishnanssankar" target="_blank" rel="noreferrer" >
           <AiFillGithub className={iconClass} />
         </a>
-        <a href="">
+        <a href="https://linkedin.com/in/harikrishnanssankar" target="_blank" rel="noreferrer" >
           <AiFillLinkedin className={iconClass} />
         </a>
         <a href="">

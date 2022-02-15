@@ -1,5 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "next-themes";
+import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import "../styles/globals.css";

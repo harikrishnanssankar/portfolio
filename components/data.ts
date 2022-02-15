@@ -9,6 +9,8 @@ import { MdLanguage } from "react-icons/md";
 import { BsCircleFill } from "react-icons/bs";
 import { IProject, IService, ISkill } from "./type";
 
+export const aboutContent:string = "Full Stack Developer with experience in creating elegant and high-performance full stack web applications. Well-versed with software development & quality processes, strong technical and analytical skills, supported by good communication skills, good planning and organizing skills, bottom line responsibility for deliverables";
+
 export const services: IService[] = [
   {
     title: "Education",
@@ -23,12 +25,12 @@ export const services: IService[] = [
   },
   {
     title: "Backend Development",
-    about: "Created Ecommerce application using Node.js Express and MongoDB",
+    about: "Ecommerce application using Node.js Express and MongoDB",
     Icon: FaServer,
   },
   {
     title: "Mobile App Development",
-    about: "Android App,development using React Native and Ionic React",
+    about: "Android App development using React Native",
     Icon: FaMobileAlt,
   },
   {
@@ -47,17 +49,17 @@ export const services: IService[] = [
 export const languages: ISkill[] = [
   {
     name: "ReactJs",
-    level: "90%",
+    level: "92%",
+    Icon: BsCircleFill,
+  },
+  {
+    name: "JavaScript",
+    level: "80%",
     Icon: BsCircleFill,
   },
   {
     name: "NextJs",
     level: "70%",
-    Icon: BsCircleFill,
-  },
-  {
-    name: "JavaScript",
-    level: "60%",
     Icon: BsCircleFill,
   },
   {
