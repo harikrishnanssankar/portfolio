@@ -41,10 +41,10 @@ const ProjectCard: FunctionComponent<{
       <Image
         onClick={() => setModelOpen(!modelOpen)}
         src={image_path}
-        alt=""
+        alt={name}
         className="cursor-pointer"
-        width={300}
-        height={150}
+        width={320}
+        height={155}
         layout="responsive"
       />
       <p onClick={() => setModelOpen(!modelOpen)} className="my-2 text-center w-full cursor-pointer">
@@ -57,7 +57,7 @@ const ProjectCard: FunctionComponent<{
           initial="initial"
           animate="animate"
           ref={modalRef}
-          className="absolute top-0 left-0 z-10 w-full p-2 md:p-10 h-auto gap-x-12 grid md:grid-cols-2 text-black dark:text-white bg-gray-100 dark:bg-dark-100 rounded-xl shadow-custom-light dark:shadow-custom-dark "
+          className="absolute top-20 left-0 z-10 w-full p-2 md:p-10 h-auto gap-x-12 grid md:grid-cols-2 text-black dark:text-white bg-gray-100 dark:bg-dark-100 rounded-xl shadow-custom-light dark:shadow-custom-dark "
         >
           <motion.div
             variants={stagger}

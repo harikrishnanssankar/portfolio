@@ -37,3 +37,6 @@ body{
   height: 0;
   background-color: #1e212600;
 }
+#__next{
+  width: 100%;
+}

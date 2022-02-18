@@ -5,19 +5,23 @@ import { GiTie } from "react-icons/gi";
 import { useTheme } from "next-themes";
 
 const iconClass = "w-8 h-8 cursor-pointer ";
-const textSection = "px-2 py-1 my-3 bg-gray-200 dark:bg-dark-200  rounded-full mx-4 ";
+const textSection =
+  "px-2 py-1 my-3 bg-gray-200 dark:bg-dark-200  rounded-full mx-4 ";
 const buttonClass =
-  "bg-gradient-to-r from-green-400 to-blue-400 w-8/12 rounded-full py-2 px-5 text-white my-3";
+  "bg-gradient-to-r from-green-400 to-blue-400 w-8/12 rounded-full py-2 px-5 text-white my-3 capitalize";
 
 const Sidebar = () => {
-
-  const { theme, setTheme } = useTheme()
-  
+  const { theme, setTheme, systemTheme } = useTheme();
 
   const changeTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light")
+    theme === "system" && systemTheme === "light"
+      ? setTheme("dark")
+      : theme === "system" && systemTheme === "dark"
+      ? setTheme("light")
+      : theme === "light"
+      ? setTheme("dark")
+      : setTheme("light");
   };
-  
 
   return (
     <div className="text-center pt-5">
@@ -36,10 +40,18 @@ const Sidebar = () => {
         <GiTie /> Download Resume
       </p>
       <div className="flex flex-row items-center justify-around w-9/12 mx-auto my-5 text-green-500 md:w-full">
-        <a href="https://github.com/harikrishnanssankar" target="_blank" rel="noreferrer" >
+        <a
+          href="https://github.com/harikrishnanssankar"
+          target="_blank"
+          rel="noreferrer"
+        >
           <AiFillGithub className={iconClass} />
         </a>
-        <a href="https://linkedin.com/in/harikrishnanssankar" target="_blank" rel="noreferrer" >
+        <a
+          href="https://linkedin.com/in/harikrishnanssankar"
+          target="_blank"
+          rel="noreferrer"
+        >
           <AiFillLinkedin className={iconClass} />
         </a>
         <a href="">
@@ -60,7 +72,9 @@ const Sidebar = () => {
         Email Me
       </button>
       <br />
-      <button onClick={changeTheme} className={buttonClass}>toggle theme</button>
+      <button onClick={changeTheme} className={buttonClass}>
+        {theme} theme
+      </button>
     </div>
   );
 };
