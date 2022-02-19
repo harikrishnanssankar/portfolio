@@ -21,13 +21,13 @@ export const NavItem: FunctionComponent<{
 
 const ProjectNavbar:FunctionComponent<{handleFilterCategory:Function, activeCategory:string}> = (props) => {
   return (
-    <div className="flex space-x-3 px-3 py-2 overflow-x-auto list-none">
+    <ul className="flex space-x-3 px-3 py-2 overflow-x-auto list-none">
       <NavItem value="all" {...props} />
       <NavItem value="react" {...props} />
       <NavItem value="node" {...props} />
       <NavItem value="nextjs" {...props} />
       <NavItem value="mongo" {...props} />
-    </div>
+    </ul>
   );
 };
 

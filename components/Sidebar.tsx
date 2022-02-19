@@ -36,14 +36,18 @@ const Sidebar = () => {
         <span style={{ color: "#00f260" }}>Harikrishnan </span>S
       </h3>
       <p className={textSection}>React Developer</p>
-      <p className={textSection + "flex items-center justify-center"}>
+      {/* <p className={textSection + "flex items-center justify-center"}>
         <GiTie /> Download Resume
+      </p> */}
+      <p className={textSection + "flex items-center justify-center"}>
+        Contact Me
       </p>
       <div className="flex flex-row items-center justify-around w-9/12 mx-auto my-5 text-green-500 md:w-full">
         <a
           href="https://github.com/harikrishnanssankar"
           target="_blank"
           rel="noreferrer"
+          aria-label="Github"
         >
           <AiFillGithub className={iconClass} />
         </a>
@@ -51,10 +55,16 @@ const Sidebar = () => {
           href="https://linkedin.com/in/harikrishnanssankar"
           target="_blank"
           rel="noreferrer"
+          aria-label="LinkedIn"
         >
           <AiFillLinkedin className={iconClass} />
         </a>
-        <a href="">
+        <a
+          href="https://www.instagram.com/hari_krishnans._/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Twitter"
+        >
           <AiFillInstagram className={iconClass} />
         </a>
       </div>

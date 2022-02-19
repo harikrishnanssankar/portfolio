@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Head from "next/head";
 import { fadeInUp, routeAnimation, stagger } from "../components/animations";
 import Bar from "../components/Bar";
 import { languages, tools } from "../components/data";
@@ -9,31 +10,36 @@ const Resume = () => {
 
   return (
     <motion.div  variants={routeAnimation} initial="initial" animate="animate" exit="exit" className="py-2 px-6">
+      <Head>
+        <title>Harikrishnans | Resume</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="theme-color" content="#4ade80"/>
+      </Head>
       <motion.div variants={fadeInUp} initial="initial" animate="animate" className="grid gap-6 md:grid-cols-2">
         <div>
-          <h5 className="my-3 text-2xl font-bold">Education</h5>
+          <span className="my-3 text-2xl font-bold">Education</span>
           <div>
-            <h5 className="my-2 text-xl font-bold">
+            <span className="my-2 text-xl font-bold">
               Electrical and Electronics Engineering
-            </h5>
-            <p className="font-semibold">Kerala Technological Univercity</p>
-            <p>2017-2021 batch</p>
+            </span>
+            <p className="font-semibold py-1">Kerala Technological Univercity</p>
+            <p className="py-1">2017-2021 batch</p>
           </div>
         </div>
         <div>
-          <h5 className="my-3 text-2xl font-bold">Experience</h5>
+          <span className="my-3 text-2xl font-bold">Experience</span>
           <div>
-            <h5 className="my-2 text-xl font-bold">ReactJs Developer</h5>
-            <p className="font-semibold">iAntz IT Solutions(2021 - on)</p>
-            <p>
-              {"I'm a Fresher with Jr. React Developer Post and Sr. Frontend Developer works!!!"}
+            <span className="my-2 text-xl font-bold">ReactJs Developer</span>
+            <p className="font-semibold py-1">iAntz IT Solutions(2021 - present)</p>
+            <p className="py-1">
+              {"Working as Jr. React Developer with Sr. Frontend Developer responsibilities!!!"}
             </p>
           </div>
         </div>
       </motion.div>
       <div className="grid gap-6 md:grid-cols-2">
         <div>
-          <h5 className="my-3 text-2xl font-bold">Languages and Frameworks</h5>
+          <span className="my-3 text-2xl font-bold">Languages and Frameworks</span>
           <motion.div variants={stagger} initial="initial" animate="animate" className="my-2">
               {
                   languages.map(language => <Bar data={language} key={language.name} />)
@@ -41,7 +47,7 @@ const Resume = () => {
           </motion.div>
         </div>
         <div>
-          <h5 className="my-3 text-2xl font-bold">Tools and Softwares</h5>
+          <span className="my-3 text-2xl font-bold">Tools and Softwares</span>
           <motion.div variants={stagger} initial="initial" animate="animate" className="my-2">
               {
                   tools.map(tool => <Bar data={tool} key={tool.name} />)

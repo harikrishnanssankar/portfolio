@@ -12,11 +12,11 @@ const Index = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="theme-color" content="#4ade80"/>
       </Head>
-      <h5 className="my-2 font-medium">
+      <span className="my-2 font-medium">
         {aboutContent}
-      </h5>
+      </span>
       <div className="p-4 mt-5 bg-gray-400 dark:bg-dark-100 flex-grow " style={{marginLeft: "-1.5rem", marginRight: "-1.5rem"}} >
-        <h6 className="my-3 text-xl font-bold tracking-wide" >Skills</h6>
+        <span className="my-3 text-xl font-bold tracking-wide" >Skills</span>
         <motion.div variants={stagger} initial="initial"animate="animate" className="grid lg:grid-cols-2 gap-6">
           {services.map((service) => {
             return (
