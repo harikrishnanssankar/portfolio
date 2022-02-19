@@ -10,14 +10,23 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-        <meta name="description" content="Personal Portfolio of Harikrishnan S. A Self-Learned Full Stack developer, currently working as React js developer"/>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#4ade80"/>
+          <meta
+            name="description"
+            content="Personal Portfolio of Harikrishnan S. A Self-Learned Full Stack developer, currently working as React js developer"
+          />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
             rel="stylesheet"
           />
-          <link rel="shortcut icon" href="/icon/favicon.ico" type="image/x-icon" />
+          <link
+            rel="shortcut icon"
+            href="/icon/favicon.ico"
+            type="image/x-icon"
+          />
           <link rel="apple-touch-icon" href="/icon/apple-touch-icon.png" />
           <link
             rel="apple-touch-icon"
