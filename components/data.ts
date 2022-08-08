@@ -41,7 +41,7 @@ export const services: IService[] = [
   },
   {
     title: "Languages Known",
-    about: "JavaScript, Python, C",
+    about: "JavaScript, Java, Python, C",
     Icon: MdLanguage,
   },
 ];
@@ -64,17 +64,17 @@ export const languages: ISkill[] = [
   },
   {
     name: "Node.js",
-    level: "50%",
+    level: "70%",
     Icon: BsCircleFill,
   },
   {
     name: "ExpressJs",
-    level: "40%",
+    level: "70%",
     Icon: BsCircleFill,
   },
   {
     name: "MongoDB",
-    level: "30%",
+    level: "50%",
     Icon: BsCircleFill,
   },
 ];
@@ -82,12 +82,12 @@ export const languages: ISkill[] = [
 export const tools: ISkill[] = [
   {
     name: "Git",
-    level: "70%",
+    level: "80%",
     Icon: BsCircleFill,
   },
   {
     name: "npm",
-    level: "40%",
+    level: "60%",
     Icon: BsCircleFill,
   },
 ];
