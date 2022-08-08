@@ -30,9 +30,9 @@ const Resume = () => {
           <span className="my-3 text-2xl font-bold">Experience</span>
           <div>
             <span className="my-2 text-xl font-bold">ReactJs Developer</span>
-            <p className="font-semibold py-1">iAntz IT Solutions(2021 - present)</p>
+            <p className="font-semibold py-1">iAntz IT Solutions(Sept 2021 - June 2022)</p>
             <p className="py-1">
-              {"Working as Jr. React Developer with Sr. Frontend Developer responsibilities!!!"}
+              {"Developed web applications front-end for Ed-tech, e-commerce, landing pages, dashboards, etc."}
             </p>
           </div>
         </div>
